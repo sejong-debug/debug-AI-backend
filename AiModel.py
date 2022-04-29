@@ -7,7 +7,7 @@ WEIGHT_PATH = "model1.pth"
 N_CLASSES = 7
 
 def create_model():
-  model = timm.create_model(model_name = 'efficientnet_b0', pretrained=True)
+  model = timm.create_model(model_name = 'efficientnet_b0', pretrained=False)
   model.classifier = Linear(in_features=1280, out_features=N_CLASSES, bias=True)
 
   device = torch.device('cpu')  
