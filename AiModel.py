@@ -56,7 +56,7 @@ def detectIssue(image, crop_type):
 
   H *= (np.eye(N_CLASSES)[crop_type] @ crop_mask)
 
-  predict = H.squeeze(0)[disease_label]
+  predict = H.squeeze(0)[disease_label].tolist()
   # 백엔드에겐 정상을 제외한 '질병만의' 확률값을 전송해야한다.
 
-  return list(predict)
+  return predict
