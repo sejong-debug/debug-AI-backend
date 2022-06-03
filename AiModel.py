@@ -59,4 +59,4 @@ def detectIssue(image, crop_type):
   predict = H.squeeze(0)[disease_label]
   # 백엔드에겐 정상을 제외한 '질병만의' 확률값을 전송해야한다.
 
-  return predict
+  return list(predict)
