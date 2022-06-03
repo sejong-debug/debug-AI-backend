@@ -232,6 +232,9 @@ disease_healthy_map = \
 }
 
 import numpy as np
+def get_crop_map():
+    return crop_map
+
 def get_crop_mask():
     global crop_map
     outer = []
